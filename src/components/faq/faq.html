@@ -41,12 +41,16 @@
 
             </button>
 
-            <div class="faq-content">
+            @if (isQuestionOpen(index)) {
+
+            <div class="qa-answer">
               <p>
                 <span class="answer-label">A</span>
                 <span>{{ item.answer }}</span>
               </p>
             </div>
+
+            }
 
           </div>
 

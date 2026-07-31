@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-faq',
@@ -34,18 +34,13 @@ export class Faq {
     }
   ];
 
-  private readonly openQuestionIndexes = new Set<number>([0]);
+  private readonly openQuestionIndex = signal<number | null>(0);
 
   toggleQuestion(index: number): void {
-    if (this.openQuestionIndexes.has(index)) {
-      this.openQuestionIndexes.delete(index);
-      return;
-    }
-
-    this.openQuestionIndexes.add(index);
+    this.openQuestionIndex.update((currentIndex) => currentIndex === index ? null : index);
   }
 
   isQuestionOpen(index: number): boolean {
-    return this.openQuestionIndexes.has(index);
+    return this.openQuestionIndex() === index;
   }
 }
