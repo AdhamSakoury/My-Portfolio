@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://adhamsakoury.github.io/My-Portfolio/sitemap.xml
+Sitemap: https://celadon-brioche-990015.netlify.app/sitemap.xml
