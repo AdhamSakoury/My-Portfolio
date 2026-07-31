@@ -37,6 +37,21 @@
       </ul>
     </nav>
 
+    <button
+      type="button"
+      class="theme-toggle"
+      [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
+      [attr.title]="isDarkMode ? 'Light mode' : 'Dark mode'"
+      (click)="toggleTheme()">
+
+      <i
+        class="bi"
+        [class.bi-sun-fill]="isDarkMode"
+        [class.bi-moon-stars-fill]="!isDarkMode">
+      </i>
+
+    </button>
+
     <!-- Mobile Toggle -->
     <button
       type="button"
@@ -92,6 +107,22 @@
     </a>
 
   </div>
+
+  <button
+    type="button"
+    class="theme-toggle sidebar-theme-toggle"
+    [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
+    (click)="toggleTheme()">
+
+    <i
+      class="bi"
+      [class.bi-sun-fill]="isDarkMode"
+      [class.bi-moon-stars-fill]="!isDarkMode">
+    </i>
+
+    <span>{{ isDarkMode ? 'Light mode' : 'Dark mode' }}</span>
+
+  </button>
 
   <ul>
 
