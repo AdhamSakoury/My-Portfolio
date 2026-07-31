@@ -2350,6 +2350,16 @@ section,
 }
 
 .faq .faq-container .faq-item .qa-answer {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding-top: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.25s ease-in-out, padding-top 0.3s ease-in-out;
+}
+
+.faq .faq-container .faq-item .qa-answer.qa-answer-open {
+  max-height: 180px;
+  opacity: 1;
   padding-top: 14px;
 }
 

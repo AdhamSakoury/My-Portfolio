@@ -41,16 +41,15 @@
 
             </button>
 
-            @if (isQuestionOpen(index)) {
-
-            <div class="qa-answer">
+            <div
+              class="qa-answer"
+              [class.qa-answer-open]="isQuestionOpen(index)"
+              [attr.aria-hidden]="!isQuestionOpen(index)">
               <p>
                 <span class="answer-label">A</span>
                 <span>{{ item.answer }}</span>
               </p>
             </div>
-
-            }
 
           </div>
 
