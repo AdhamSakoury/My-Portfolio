@@ -31,6 +31,10 @@
   --nav-dropdown-background-color: #065cc2; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #acc4e0; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-shell-background: #0f172a;
+  --nav-shell-color: #ffffff;
+  --nav-shell-hover-color: #5aa0ff;
+  --nav-shell-shadow: rgba(15, 23, 42, 0.12);
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -49,6 +53,40 @@
   --contrast-color: #ffffff;
 }
 
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background-color: #0b1220;
+  --default-color: #c8d3e2;
+  --heading-color: #f3f7ff;
+  --accent-color: #5aa0ff;
+  --surface-color: #121c2e;
+  --contrast-color: #ffffff;
+  --nav-color: #dbe8ff;
+  --nav-hover-color: #7bb4ff;
+  --nav-mobile-background-color: #08101e;
+  --nav-dropdown-background-color: #17243a;
+  --nav-dropdown-color: #c8d3e2;
+  --nav-dropdown-hover-color: #ffffff;
+  --nav-shell-background: #050b16;
+  --nav-shell-color: #f3f7ff;
+  --nav-shell-hover-color: #7bb4ff;
+  --nav-shell-shadow: rgba(0, 0, 0, 0.45);
+}
+
+:root[data-theme="dark"] .light-background {
+  --background-color: #0f1829;
+  --surface-color: #162236;
+}
+
+:root[data-theme="dark"] .dark-background {
+  --background-color: #0d2b52;
+  --default-color: #f3f7ff;
+  --heading-color: #ffffff;
+  --accent-color: #9ccaff;
+  --surface-color: #153865;
+  --contrast-color: #ffffff;
+}
+
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
@@ -61,6 +99,7 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -473,6 +512,7 @@ section,
   background-color: var(--background-color);
   padding: 60px 0;
   overflow: clip;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /*--------------------------------------------------------------
@@ -2240,34 +2280,72 @@ section,
 .faq .faq-container .faq-item {
   background-color: var(--surface-color);
   position: relative;
-  padding: 20px;
+  padding: 22px 24px;
   margin-bottom: 15px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  border-radius: 5px;
+  border-radius: 8px;
   overflow: hidden;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .faq .faq-container .faq-item:last-child {
   margin-bottom: 0;
 }
 
-.faq .faq-container .faq-item h3 {
+.faq .faq-container .faq-item .qa-question {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--heading-color);
+  padding: 0;
+  text-align: left;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0 30px 0 0;
+  font-size: 17px;
+  line-height: 1.45;
+  margin: 0;
   transition: 0.3s;
   cursor: pointer;
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 
-.faq .faq-container .faq-item h3 .num {
+.faq .faq-container .faq-item .qa-question:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent-color), transparent 65%);
+  outline-offset: 5px;
+  border-radius: 6px;
+}
+
+.faq .faq-container .faq-item .qa-question .num,
+.faq .faq-container .faq-item .qa-question .question-label {
   color: var(--accent-color);
-  padding-right: 5px;
 }
 
-.faq .faq-container .faq-item h3:hover {
+.faq .faq-container .faq-item .qa-question .question-label,
+.faq .faq-container .faq-item .answer-label {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  font-size: 13px;
+  font-weight: 800;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 88%);
+}
+
+.faq .faq-container .faq-item .qa-question-text {
+  flex: 1 1 auto;
+}
+
+.faq .faq-container .faq-item .answer-label {
+  margin-right: 10px;
+  color: var(--accent-color);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
+}
+
+.faq .faq-container .faq-item .qa-question:hover {
   color: var(--accent-color);
 }
 
@@ -2280,6 +2358,9 @@ section,
 }
 
 .faq .faq-container .faq-item .faq-content p {
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
   margin-bottom: 0;
   overflow: hidden;
 }
@@ -2294,6 +2375,14 @@ section,
   cursor: pointer;
 }
 
+.faq .faq-container .faq-item .qa-toggle {
+  color: var(--accent-color);
+  flex: 0 0 auto;
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
 .faq .faq-container .faq-item .faq-toggle:hover {
   color: var(--accent-color);
 }
@@ -2301,9 +2390,10 @@ section,
 .faq .faq-container .faq-active {
   background-color: color-mix(in srgb, var(--accent-color), transparent 97%);
   border-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+  box-shadow: 0 14px 35px color-mix(in srgb, var(--default-color), transparent 92%);
 }
 
-.faq .faq-container .faq-active h3 {
+.faq .faq-container .faq-active .qa-question {
   color: var(--accent-color);
 }
 
@@ -2319,11 +2409,26 @@ section,
   color: var(--accent-color);
 }
 
+.faq .faq-container .faq-active .qa-toggle {
+  transform: rotate(0deg);
+  color: var(--accent-color);
+}
+
+:root[data-theme="dark"] .faq .faq-container .faq-item {
+  border-color: rgba(156, 202, 255, 0.14);
+}
+
+:root[data-theme="dark"] .faq .faq-container .faq-active {
+  background-color: #111c2f;
+  border-color: rgba(122, 180, 255, 0.34);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.24);
+}
+
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-box {
-  background-color: var(--accent-color);
+  background: var(--accent-color);
   color: var(--contrast-color);
   padding: 3rem;
   border-radius: 1rem;
@@ -2471,6 +2576,62 @@ section,
 
 .contact .contact-form .btn:hover {
   background-color: color-mix(in srgb, var(--accent-color), var(--contrast-color) 20%);
+}
+
+:root[data-theme="dark"] .contact.light-background {
+  --background-color: #080f1b;
+  --surface-color: #101a2b;
+}
+
+:root[data-theme="dark"] .contact .info-box {
+  background: linear-gradient(135deg, #142238, #183455);
+  border: 1px solid rgba(156, 202, 255, 0.14);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+:root[data-theme="dark"] .contact .info-box p {
+  opacity: 0.88;
+}
+
+:root[data-theme="dark"] .contact .info-item .icon-box {
+  background-color: rgba(156, 202, 255, 0.12);
+}
+
+:root[data-theme="dark"] .contact .info-item:hover .icon-box {
+  background-color: rgba(156, 202, 255, 0.2);
+}
+
+:root[data-theme="dark"] .contact .contact-form {
+  border: 1px solid rgba(156, 202, 255, 0.12);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.24);
+}
+
+:root[data-theme="dark"] .contact .contact-form .btn {
+  background-color: #1d2d45;
+  border: 1px solid #36577d;
+  color: #eaf2ff;
+}
+
+:root[data-theme="dark"] .contact .contact-form .btn-primary {
+  background-color: #315f9b;
+  border-color: #4778b7;
+}
+
+:root[data-theme="dark"] .contact .contact-form .btn-outline-primary {
+  background-color: transparent;
+  border-color: #3d628d;
+  color: #9ccaff;
+}
+
+:root[data-theme="dark"] .contact .contact-form .btn-dark {
+  background-color: #0c1422;
+  border-color: #263a58;
+}
+
+:root[data-theme="dark"] .contact .contact-form .btn:hover {
+  background-color: #4778b7;
+  border-color: #5f91ce;
+  color: #ffffff;
 }
 
 /*--------------------------------------------------------------
