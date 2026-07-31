@@ -1,0 +1,143 @@
+<header id="header" class="header fixed-top">
+
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+
+    <!-- Logo -->
+    <a href="#hero" class="navbar-brand">
+      Adham Raafat Sakoury
+    </a>
+
+    <!-- Desktop Menu -->
+    <nav class="desktop-nav">
+      <ul>
+
+        <li><a href="#hero">Home</a></li>
+
+        <li><a href="#about">About</a></li>
+
+        <li><a href="#skills">Skills</a></li>
+
+        <li><a href="#resume">Resume</a></li>
+
+        <li><a href="#portfolio">Projects</a></li>
+
+        <li><a href="#services">Services</a></li>
+
+        <li><a href="#contact">Contact</a></li>
+
+        <li>
+          <a
+            href="assets/cv/Adham_Raafat_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer">
+            CV
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Mobile Toggle -->
+    <button
+      type="button"
+      class="mobile-toggle d-xl-none"
+      aria-label="Toggle navigation menu"
+      (click)="toggleMenu()">
+
+      <i
+        class="bi"
+        [class.bi-list]="!isMenuOpen"
+        [class.bi-x]="isMenuOpen">
+      </i>
+
+    </button>
+
+  </div>
+
+</header>
+
+<!-- Mobile Sidebar -->
+<div
+  class="mobile-sidebar"
+  [class.active]="isMenuOpen">
+
+  <div class="profile-img">
+
+    <img
+      src="assets/img/adham.jpg"
+      alt="Adham">
+
+  </div>
+
+  <h2 class="sidebar-name">
+    Adham Sakoury
+  </h2>
+
+  <div class="social-links">
+
+    <a href="https://github.com/AdhamSakoury" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <i class="bi bi-github"></i>
+    </a>
+
+    <a href="https://linkedin.com/in/adham-raafat-a6549b228" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <i class="bi bi-linkedin"></i>
+    </a>
+
+    <a href="#" aria-label="Facebook" rel="noopener noreferrer" target="_blank">
+      <i class="bi bi-facebook"></i>
+    </a>
+
+    <a href="#" aria-label="Instagram" rel="noopener noreferrer" target="_blank">
+      <i class="bi bi-instagram"></i>
+    </a>
+
+  </div>
+
+  <ul>
+
+    <li>
+      <a href="#hero" (click)="closeMenu()">Home</a>
+    </li>
+
+    <li>
+      <a href="#about" (click)="closeMenu()">About</a>
+    </li>
+
+    <li>
+      <a href="#skills" (click)="closeMenu()">Skills</a>
+    </li>
+
+    <li>
+      <a href="#resume" (click)="closeMenu()">Resume</a>
+    </li>
+
+    <li>
+      <a href="#portfolio" (click)="closeMenu()">Projects</a>
+    </li>
+
+    <li>
+      <a href="#services" (click)="closeMenu()">Services</a>
+    </li>
+
+    <li>
+      <a href="#contact" (click)="closeMenu()">Contact</a>
+    </li>
+
+    <li>
+      <a
+        href="assets/cv/Adham_Raafat_CV.pdf"
+        target="_blank">
+        CV
+      </a>
+    </li>
+
+  </ul>
+
+</div>
+
+<!-- Overlay -->
+<div
+  class="overlay"
+  *ngIf="isMenuOpen"
+  (click)="closeMenu()">
+</div>

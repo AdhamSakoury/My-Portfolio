@@ -1,0 +1,106 @@
+/* ===== CTA Buttons ===== */
+.cta-section {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.cta-section .btn {
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.cta-section .btn-primary {
+  background-color: #065cc2;
+  color: #ffffff !important;
+  border: 2px solid #065cc2;
+}
+
+.cta-section .btn-primary:hover {
+  background-color: #0a4fa3;
+  border-color: #0a4fa3;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(6, 92, 194, 0.4);
+  opacity: 1;
+}
+
+.cta-section .btn-outline {
+  background-color: transparent;
+  color: #065cc2 !important;
+  border: 2px solid #065cc2;
+}
+
+.cta-section .btn-outline:hover {
+  background-color: #065cc2;
+  color: #ffffff !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(6, 92, 194, 0.4);
+  opacity: 1;
+}
+/* ===== Skills Grid ===== */
+.about-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+
+.about-skill-item {
+  background: #f7faff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  border: 1px solid rgba(6, 92, 194, 0.08);
+  transition: transform .3s ease, box-shadow .3s ease !important;
+  will-change: transform;
+}
+
+.about-skill-item:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 10px 30px rgba(6, 92, 194, 0.15);
+}
+
+.about-skill-item i {
+  font-size: 28px;
+  color: #ffffff;
+  background-color: #065cc2;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.about-skill-item h4 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #13447f;
+  margin-bottom: 10px;
+}
+
+.about-skill-item p {
+  font-size: 14px;
+  color: #6b7f99;
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 576px) {
+  .about-skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.quote {
+  font-style: italic;
+  color: #5a6e84;
+  text-align: center;
+}
