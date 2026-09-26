@@ -1,10 +1,83 @@
 .hero {
-  padding-top: 100px;
   min-height: 100vh;
+  min-height: 100dvh;
+  padding-top: 85px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
-header {
-  position: fixed;
-  top: 0;
+
+.hero .image-container {
+  position: relative;
+  max-width: 460px;
   width: 100%;
-  z-index: 9999;
+  margin: 0 auto;
+}
+
+.hero .hero-main-image {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+/* Tablet & Mobile responsive card bounds */
+@media (max-width: 991.98px) {
+  .hero {
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .hero .image-container {
+    max-width: 380px;
+    margin-top: 2.5rem;
+  }
+
+  .hero .floating-card.card-1 {
+    left: 0;
+    top: 5%;
+  }
+
+  .hero .floating-card.card-2 {
+    right: 0;
+    top: 65%;
+  }
+
+  .hero .floating-card.card-3 {
+    left: 4%;
+    bottom: 5%;
+  }
+
+  .hero .image-overlay {
+    top: 10px;
+    left: 10px;
+    right: -10px;
+    bottom: -10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero .hero-title {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    word-break: break-word;
+  }
+
+  .hero .hero-actions {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .hero .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero .floating-card {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
 }

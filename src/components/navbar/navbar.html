@@ -1,10 +1,11 @@
 <header id="header" class="header fixed-top">
 
-  <div class="container-fluid d-flex align-items-center justify-content-between">
+  <div class="container-xl d-flex align-items-center justify-content-between">
 
-    <!-- Logo -->
+    <!-- Logo / Brand -->
     <a href="#hero" class="navbar-brand">
-      Adham Raafat Sakoury
+      <span class="d-none d-sm-inline">Adham Raafat Sakoury</span>
+      <span class="d-inline d-sm-none">Adham Sakoury</span>
     </a>
 
     <!-- Desktop Menu -->
@@ -29,7 +30,8 @@
           <a
             href="assets/cv/Adham_Raafat_CV.pdf"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+            class="cv-nav-link">
             CV
           </a>
         </li>
@@ -37,35 +39,40 @@
       </ul>
     </nav>
 
-    <button
-      type="button"
-      class="theme-toggle"
-      [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
-      [attr.title]="isDarkMode ? 'Light mode' : 'Dark mode'"
-      (click)="toggleTheme()">
+    <!-- Header Actions (Theme + Mobile Toggle) -->
+    <div class="header-actions d-flex align-items-center gap-2 gap-sm-3">
 
-      <i
-        class="bi"
-        [class.bi-sun-fill]="isDarkMode"
-        [class.bi-moon-stars-fill]="!isDarkMode">
-      </i>
+      <button
+        type="button"
+        class="theme-toggle"
+        [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
+        [attr.title]="isDarkMode ? 'Light mode' : 'Dark mode'"
+        (click)="toggleTheme()">
 
-    </button>
+        <i
+          class="bi"
+          [class.bi-sun-fill]="isDarkMode"
+          [class.bi-moon-stars-fill]="!isDarkMode">
+        </i>
 
-    <!-- Mobile Toggle -->
-    <button
-      type="button"
-      class="mobile-toggle d-xl-none"
-      aria-label="Toggle navigation menu"
-      (click)="toggleMenu()">
+      </button>
 
-      <i
-        class="bi"
-        [class.bi-list]="!isMenuOpen"
-        [class.bi-x]="isMenuOpen">
-      </i>
+      <!-- Mobile Toggle -->
+      <button
+        type="button"
+        class="mobile-toggle"
+        aria-label="Toggle navigation menu"
+        (click)="toggleMenu()">
 
-    </button>
+        <i
+          class="bi"
+          [class.bi-list]="!isMenuOpen"
+          [class.bi-x]="isMenuOpen">
+        </i>
+
+      </button>
+
+    </div>
 
   </div>
 
@@ -75,6 +82,16 @@
 <div
   class="mobile-sidebar"
   [class.active]="isMenuOpen">
+
+  <div class="sidebar-header d-flex justify-content-end mb-2">
+    <button
+      type="button"
+      class="sidebar-close-btn"
+      aria-label="Close navigation menu"
+      (click)="closeMenu()">
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
 
   <div class="profile-img">
 
@@ -98,11 +115,11 @@
       <i class="bi bi-linkedin"></i>
     </a>
 
-    <a href="#" aria-label="Facebook" rel="noopener noreferrer" target="_blank">
+    <a href="https://facebook.com/" aria-label="Facebook" rel="noopener noreferrer" target="_blank">
       <i class="bi bi-facebook"></i>
     </a>
 
-    <a href="#" aria-label="Instagram" rel="noopener noreferrer" target="_blank">
+    <a href="https://instagram.com/" aria-label="Instagram" rel="noopener noreferrer" target="_blank">
       <i class="bi bi-instagram"></i>
     </a>
 
@@ -157,7 +174,8 @@
     <li>
       <a
         href="assets/cv/Adham_Raafat_CV.pdf"
-        target="_blank">
+        target="_blank"
+        (click)="closeMenu()">
         CV
       </a>
     </li>
