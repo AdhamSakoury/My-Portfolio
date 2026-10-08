@@ -32,4 +32,4 @@
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(2px);z-index:9998}
 @media(max-width:1199.98px){.desktop-nav{display:none!important}.mobile-toggle{display:inline-flex!important}}
 @media(min-width:1200px){.mobile-toggle{display:none!important}.mobile-sidebar,.overlay{display:none!important}}
-.desktop-nav{margin-left:auto}
+.desktop-nav{margin:0 12px 0 auto}
