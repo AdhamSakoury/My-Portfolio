@@ -10,6 +10,7 @@ import { Projects } from '../components/projects/projects';
 import { Faq } from '../components/faq/faq';
 import { Contact } from '../components/contact/contact';
 import { Footer } from '../components/footer/footer';
+import { GithubRepos } from '../components/github-repos/github-repos';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ import { Footer } from '../components/footer/footer';
     Services,
     Skills,
     Projects,
+    GithubRepos,
     Faq,
     Contact,
     Footer

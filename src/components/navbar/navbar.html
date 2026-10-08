@@ -22,6 +22,8 @@
 
         <li><a href="#portfolio">Projects</a></li>
 
+        <li><a href="#github">GitHub</a></li>
+
         <li><a href="#services">Services</a></li>
 
         <li><a href="#contact">Contact</a></li>
@@ -125,22 +127,6 @@
 
   </div>
 
-  <button
-    type="button"
-    class="theme-toggle sidebar-theme-toggle"
-    [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
-    (click)="toggleTheme()">
-
-    <i
-      class="bi"
-      [class.bi-sun-fill]="isDarkMode"
-      [class.bi-moon-stars-fill]="!isDarkMode">
-    </i>
-
-    <span>{{ isDarkMode ? 'Light mode' : 'Dark mode' }}</span>
-
-  </button>
-
   <ul>
 
     <li>
@@ -161,6 +147,10 @@
 
     <li>
       <a href="#portfolio" (click)="closeMenu()">Projects</a>
+    </li>
+
+    <li>
+      <a href="#github" (click)="closeMenu()">GitHub</a>
     </li>
 
     <li>

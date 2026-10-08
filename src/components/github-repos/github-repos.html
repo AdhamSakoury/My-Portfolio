@@ -1,0 +1,41 @@
+<section id="github" class="github-repos section">
+  <div class="container section-title">
+    <h2>GitHub Repositories</h2>
+    <p>A selection of projects from my GitHub profile.</p>
+  </div>
+
+  <div class="container">
+    <div class="row g-4">
+      @for (repository of repositories; track repository.name) {
+        <div class="col-md-6 col-xl-4">
+          <article class="repository-card">
+            <div class="repository-heading">
+              <i class="bi bi-github" aria-hidden="true"></i>
+              <h3>{{ repository.name }}</h3>
+            </div>
+            <p>{{ repository.description }}</p>
+            <a
+              class="repository-link"
+              [href]="repository.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              [attr.aria-label]="'View ' + repository.name + ' on GitHub'">
+              View repository
+              <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </article>
+        </div>
+      }
+    </div>
+
+    <div class="github-profile-link">
+      <a
+        href="https://github.com/AdhamSakoury"
+        target="_blank"
+        rel="noopener noreferrer">
+        <i class="bi bi-github" aria-hidden="true"></i>
+        View all repositories on GitHub
+      </a>
+    </div>
+  </div>
+</section>
