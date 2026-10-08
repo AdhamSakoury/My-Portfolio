@@ -1894,7 +1894,7 @@ section,
 }
 
 .portfolio .portfolio-entry .entry-image .entry-overlay .entry-meta {
-  color: var(--accent-color);
+  color: #ffffff;
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
