@@ -46,8 +46,8 @@ export class Projects {
       category: 'E-Commerce Website',
       description: 'A modern, responsive e-commerce website for premium perfumes. Customers can explore categories, view product details, and add products to their cart through a smooth shopping experience and an elegant design that reflects the brand.',
       image: 'assets/img/projects/perfumes.png',
-      github: 'https://github.com/AdhamSakoury/Gnouby-Perfumes',
-      live: 'https://adhamsakoury.github.io/Gnouby-Perfumes/'
+      github: 'https://github.com/AdhamSakoury/Perfiumes',
+      live: 'https://perfiumes.vercel.app/'
     },
     {
       title: 'Storix',
