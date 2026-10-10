@@ -23,7 +23,7 @@ export class Projects {
       description: 'A premium e-commerce web application featuring a product catalog, shopping cart, user authentication, and responsive design. Built as part of full-stack .NET training.',
       image: 'assets/img/projects/techmart.jpg',
       github: 'https://github.com/AdhamSakoury/Tech-Mart',
-      live: 'https://swootechmart.netlify.app/'
+      live: 'https://swo-tech-mart.vercel.app/'
     },
     {
       title: 'Traflager Project',
@@ -55,7 +55,7 @@ export class Projects {
       description: 'A full-stack retail platform built with Clean Architecture, unifying POS, inventory, catalog, and e-commerce across multiple brands, branches, and warehouses. Includes an admin dashboard, POS module, and customer storefront with role-based authorization.',
       image: 'assets/img/projects/Storix.png',
       github: 'https://github.com/AdhamSakoury/STORIX',
-      live: 'https://storix-001-site1.ntempurl.com/'
+      live: 'http://storix.runasp.net/'
     }
   ];
 }
