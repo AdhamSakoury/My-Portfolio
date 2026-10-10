@@ -37,6 +37,18 @@
   --nav-shell-shadow: rgba(15, 23, 42, 0.12);
 }
 
+@media (min-width: 992px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    width: min(100% - 32px, 1600px);
+    max-width: none;
+  }
+}
+
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
@@ -1269,8 +1281,20 @@ section,
   border-radius: 15px;
   height: fit-content;
   position: sticky;
-  top: 20px;
+  top: 92px;
   box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+@media (max-width: 1199.98px) {
+  .skills .skills-summary {
+    top: 88px;
+  }
+}
+
+@media (max-width: 576px) {
+  .skills .skills-summary {
+    top: 76px;
+  }
 }
 
 .skills .skills-summary h3 {
