@@ -30,14 +30,12 @@ export class Home implements OnInit, AfterViewInit {
     setTimeout(() => {
       new Typed('.typed', {
         strings: [
-          'Front-End Developer',
-          '.NET Developer',
-          'Angular Developer',
-          'RESTful API Developer',
+          'Web Developer',
+          'Freelancer',
           'Full-Stack Developer'
         ],
         typeSpeed: 70,
-        backSpeed: 45,
+        backSpeed: 50,
         loop: true
       });
     }, 200);
