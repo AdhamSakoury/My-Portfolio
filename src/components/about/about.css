@@ -1,4 +1,10 @@
 /* ===== CTA Buttons ===== */
+@media (max-width: 991.98px) {
+  .about .profile-image-wrapper {
+    margin-bottom: 1.5rem;
+  }
+}
+
 .cta-section {
   display: flex;
   gap: 1rem;
