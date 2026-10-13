@@ -29,45 +29,10 @@
       height: 100dvh;
     }
 
-    .viewer-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      min-height: 56px;
-      padding: 0.6rem 1rem;
-      color: #f3f7ff;
-      background: #111c2e;
-      border-bottom: 1px solid #26364f;
-    }
-
-    .viewer-title {
-      overflow: hidden;
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .download-link {
-      flex: 0 0 auto;
-      padding: 0.55rem 0.9rem;
-      color: #fff;
-      background: #1769d2;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .download-link:hover {
-      background: #0e57b5;
-    }
-
     .pdf-frame {
-      flex: 1;
+      display: block;
       width: 100%;
-      min-height: 0;
+      height: 100%;
       border: 0;
       background: #fff;
     }
@@ -75,12 +40,6 @@
 </head>
 <body>
   <main class="viewer">
-    <header class="viewer-header">
-      <span class="viewer-title">Adham Raafat Sakoury — CV</span>
-      <a class="download-link" href="/assets/cv/Adham_Raafat_CV.pdf" download>
-        Download PDF
-      </a>
-    </header>
     <iframe
       class="pdf-frame"
       src="/assets/cv/Adham_Raafat_CV.pdf"
