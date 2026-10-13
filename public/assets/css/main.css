@@ -49,6 +49,18 @@
   }
 }
 
+@media (min-width: 576px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    padding-left: clamp(40px, 5vw, 80px);
+    padding-right: clamp(40px, 5vw, 80px);
+  }
+}
+
 @media (min-width: 1600px) {
   .container,
   .container-sm,
