@@ -26,12 +26,12 @@ export class Projects {
       live: 'https://swo-tech-mart.vercel.app/'
     },
     {
-      title: 'Traflager Project',
-      category: 'Doctors Landing Page',
-      description: 'A modern, responsive landing page for a healthcare platform. It helps users explore medical services, learn about doctors, and navigate the platform through a clean, professional, and trustworthy interface.',
-      image: 'assets/img/projects/traflager.png',
+      title: 'Softa',
+      category: 'Human-Centric Technology Website',
+      description: 'Softa Solutions bridges complex technology and human needs. Our flagship ProEase Hub ERP is the culmination of years listening to clients and refining enterprise resource planning.',
+      image: 'assets/img/projects/softa.png',
       github: 'https://github.com/AdhamSakoury/Traflager-Project',
-      live: 'https://adhamsakoury.github.io/Traflager-Project/'
+      live: 'https://softa-solutions.com/'
     },
     {
       title: 'Dar',
