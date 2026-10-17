@@ -19,8 +19,8 @@ export class Projects {
     },
     {
       title: 'Tech Mart',
-      category: 'Premium eCommerce Platform',
-      description: 'A premium e-commerce web application featuring a product catalog, shopping cart, user authentication, and responsive design. Built as part of full-stack .NET training.',
+      category: 'E-Commerce Platform',
+      description: 'A modern, responsive e-commerce website for premium perfumes. Customers can explore categories, view product details, and add products to their cart through a smooth shopping experience and an elegant design that reflects the brand.',
       image: 'assets/img/projects/techmart.jpg',
       github: 'https://github.com/AdhamSakoury/Tech-Mart',
       live: 'https://swo-tech-mart.vercel.app/'
@@ -43,8 +43,8 @@ export class Projects {
     },
     {
       title: 'Gnouby Perfumes',
-      category: 'E-Commerce Website',
-      description: 'A modern, responsive e-commerce website for premium perfumes. Customers can explore categories, view product details, and add products to their cart through a smooth shopping experience and an elegant design that reflects the brand.',
+      category: 'Premium E-Commerce Website',
+      description: 'A premium e-commerce web application featuring a product catalog, shopping cart, user authentication, and responsive design. Built as part of full-stack .NET training.',
       image: 'assets/img/projects/perfumes.png',
       github: 'https://github.com/AdhamSakoury/Perfiumes',
       live: 'https://perfiumes.vercel.app/'
